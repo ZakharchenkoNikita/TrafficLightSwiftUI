@@ -53,8 +53,6 @@ struct ContentView: View {
             color = .yellow
         case .yellow:
             color = .green
-        case .green:
-            color = .red
         default:
             color = .red
         }
