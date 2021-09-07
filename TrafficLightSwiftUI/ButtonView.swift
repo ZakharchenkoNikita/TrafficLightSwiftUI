@@ -11,10 +11,10 @@ struct ButtonView: View {
     var body: some View {
         Color(.systemBlue)
             .frame(width: 200, height: 80)
-            .cornerRadius(20)
+            .cornerRadius(30)
             .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.white, lineWidth: 5)
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(Color.white, lineWidth: 3)
             )
             .shadow(radius: 10)
     }
