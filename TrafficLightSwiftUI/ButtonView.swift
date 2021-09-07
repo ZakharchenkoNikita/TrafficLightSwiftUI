@@ -10,7 +10,7 @@ import SwiftUI
 struct ButtonView: View {
     var body: some View {
         Color(.systemBlue)
-            .frame(width: 200, height: 80)
+            .frame(width: 150, height: 75)
             .cornerRadius(30)
             .overlay(
                 RoundedRectangle(cornerRadius: 30)

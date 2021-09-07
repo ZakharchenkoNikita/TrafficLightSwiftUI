@@ -9,23 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var color: Color = .black
-    @State var buttonName = "START"
+    @State private var color: Color = .black
+    @State private var buttonName = "START"
     
-    let switchOff = 0.5
-    let switchOn = 1.0
+    private let switchOff = 0.5
+    private let switchOn = 1.0
     
     var body: some View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
-            VStack {
+            VStack(spacing: 15) {
                 ColorCircle(color: .red)
                     .opacity(color == .red ? switchOn : switchOff)
-                    .padding(.bottom)
                 ColorCircle(color: .yellow)
                     .opacity(color == .yellow ? switchOn : switchOff)
-                    .padding(.bottom)
                 ColorCircle(color: .green)
                     .opacity(color == .green ? switchOn : switchOff)
                 Spacer()
@@ -39,10 +37,11 @@ struct ContentView: View {
                     }
                 }
             }
-            .padding(.top)
         }
     }
-    
+}
+
+extension ContentView {
     private func getLight() {
         if buttonName == "START" {
             buttonName = "NEXT"
