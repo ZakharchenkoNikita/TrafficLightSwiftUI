@@ -20,21 +20,16 @@ struct ContentView: View {
             Color(.black)
                 .ignoresSafeArea()
             VStack(spacing: 15) {
-                ColorCircle(color: .red)
-                    .opacity(color == .red ? switchOn : switchOff)
-                ColorCircle(color: .yellow)
-                    .opacity(color == .yellow ? switchOn : switchOff)
-                ColorCircle(color: .green)
-                    .opacity(color == .green ? switchOn : switchOff)
+                ColorCircle(color: .red,
+                            opacity: color == .red ? switchOn : switchOff)
+                ColorCircle(color: .yellow,
+                            opacity: color == .yellow ? switchOn : switchOff)
+                ColorCircle(color: .green,
+                            opacity: color == .green ? switchOn : switchOff)
                 Spacer()
                 
-                Button(action: { getLight() } ) {
-                    ZStack {
-                        ButtonView()
-                        Text(buttonName)
-                            .foregroundColor(.white)
-                            .font(.largeTitle)
-                    }
+                ButtonView(title: buttonName) {
+                    getLight()
                 }
             }
         }
